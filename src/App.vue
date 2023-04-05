@@ -69,7 +69,12 @@ export default {
         ret += '/// <summary>\n';
         ret += '/// ' + items[2] + '\n';
         ret += '/// </summary>\n';
-        ret += 'public ' + typeStr + ' ' + items[0] + ' {get; set;}\n\n';
+        ret +=
+          'public ' +
+          typeStr +
+          ' ' +
+          this.toUpperFirstLetter(items[0]) +
+          ' {get; set;}\n\n';
       });
       return ret;
     },
@@ -107,6 +112,11 @@ export default {
     },
 
     copyResponse: function () {},
+
+    //先頭文字を大文字に変換するfunction
+    toUpperFirstLetter: function (str) {
+      return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+    },
   },
 };
 </script>
