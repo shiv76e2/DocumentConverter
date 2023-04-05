@@ -5,7 +5,7 @@
     <button @click="toToDomainModel">DomainModel</button>
     <br />
     <textarea v-model="input" name="example1" cols="50" rows="30"> </textarea>
-    <h2>↓↓↓↓↓↓output↓↓↓↓↓↓</h2>
+    <h2>output</h2>
 
     <button @click="copy">copy to clipboard</button>
     <pre
